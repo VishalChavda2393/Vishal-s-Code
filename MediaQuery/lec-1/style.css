@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Lobster&family=Platypi:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Poppins", serif;
+}
+
+.main-header {
+  background-color: #98ded9;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+.main-header input {
+  width: 60%;
+  height: 40px;
+  padding: 5px;
+  padding-left: 20px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.nav-links a:hover {
+  /* text-decoration: underline; */
+  color: #f2f9ff;
+}
+
+/* Main-box */
+
+.Main-box {
+  gap: 10px;
+  background-color: #f2f9ff;
+}
+
+.sub-box {
+  /* background-color: #f4f4f4; */
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+  display: grid;
+  gap: 80px;
+  transition: all 0.5s ease-in-out;
+}
+.box {
+  background-color: #f29f58;
+  color: #f5f0cd;
+  border-radius: 24px;
+  padding: 5px;
+}
+
+.box h5 {
+  margin-left: 20px;
+}
+.box:hover {
+  transform: translateX(6px) scale(1.03);
+}
+
+.sub-box img {
+  border-radius: 10px;
+}
+
+.sub-box button {
+  margin-left: 65px;
+  border: none;
+  background-color: #81bfda;
+  color: #f5f0cd;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 24px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  margin-bottom: 10px;
+}
+
+.sub-box button:hover {
+  background-color: #4485a1;
+}
+
+/* Media Query */
+
+/* for Mobile */
+@media (max-width: 768px) {
+  .sub-box {
+    grid-template-columns: repeat(1, 1fr);
+    margin: auto;
+  }
+  
+  .logo {
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+
+  .main-header input{
+    width: 34%;
+  }
+}
+
+/* for Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .sub-box {
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 50px;
+  }
+
+  .logo {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 20px;
+  }
+
+  .main-header input{
+    width: 40%;
+  }
+}
+
+/* For Laptop */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .sub-box {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .logo {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 30px;
+  }
+
+  .main-header input{
+    width: 55%;
+  }
+
+}
+
+/* For Pc */
+@media (min-width: 1441px) and (max-width: 2000px) {
+  .sub-box {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
